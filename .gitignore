@@ -6,7 +6,5 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
-geckodriver.log
+tdd-book/geckodriver.log
 virtualenv
-__pycache__
-*.pyc
