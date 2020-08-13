@@ -103,3 +103,31 @@ JavaScript error: , line 0: uncaught exception: 2147500036
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1597335121975	geckodriver	INFO	Listening on 127.0.0.1:52890
+1597335125080	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\hamza\\AppData\\Local\\Temp\\rust_mozprofilezQY4p9"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597335130364	Marionette	INFO	Listening on port 52898
+1597335130871	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597335134260	Marionette	INFO	Stopped listening on port 52898
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1597336021522	geckodriver	INFO	Listening on 127.0.0.1:53003
+1597336024635	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\hamza\\AppData\\Local\\Temp\\rust_mozprofilesqbY0Q"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1597336029531	Marionette	INFO	Listening on port 53011
+1597336029881	Marionette	WARN	TLS certificate errors will be ignored for this session
+1597336032353	Marionette	INFO	Stopped listening on port 53011
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
