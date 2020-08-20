@@ -52,14 +52,14 @@ def my_cv(request):
 def my_cv_edit(request):
     all = CV.objects.all()
     my_cv = all[0]
-    if request.method == "MY_CV":
-        form = CVForm(request.MY_CV, instance=my_cv)
+    if request.method == "POST":
+        form = CVForm(request.POST, instance=my_cv)
         if form.is_valid():
             my_cv = form.save(commit=False)
             my_cv.author = request.user
             my_cv.published_date = timezone.now()
             my_cv.save()
-            return redirect('blog/my_cv.html')
+            return redirect('my_cv')
     else:
         form = CVForm(instance=my_cv)
     return render(request, 'blog/my_cv_edit.html', {'form': form})
