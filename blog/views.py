@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Post
 from .models import CV
 from .forms import PostForm
+from .forms import CVForm
 from django.shortcuts import redirect
 
 # Create your views here.
@@ -44,4 +45,21 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 def my_cv(request):
-    return render(request, 'blog/my_cv.html', {})
+    all = CV.objects.all()
+    my_cv = all[0]
+    return render(request, 'blog/my_cv.html', {'my_cv': my_cv})
+
+def my_cv_edit(request):
+    all = CV.objects.all()
+    my_cv = all[0]
+    if request.method == "MY_CV":
+        form = CVForm(request.MY_CV, instance=my_cv)
+        if form.is_valid():
+            my_cv = form.save(commit=False)
+            my_cv.author = request.user
+            my_cv.published_date = timezone.now()
+            my_cv.save()
+            return redirect('blog/my_cv.html')
+    else:
+        form = CVForm(instance=my_cv)
+    return render(request, 'blog/my_cv_edit.html', {'form': form})

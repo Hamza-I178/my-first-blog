@@ -1,6 +1,23 @@
 {% extends 'blog/base_cv.html' %}
 
 {% block content %}
-    <div class="cv">
-    </div>
+<div class="my_cv">
+    {% if my_cv.published_date %}
+        <div class="date">
+            {{ my_cv.published_date }}
+        </div>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'my_cv_edit'%}"><span class="glyphicon glyphicon-pencil"></span></a>
+    {% endif %}
+    <h2>{{ my_cv.title }}</h2>
+    <p>{{ my_cv.name }}</p>
+    <p>{{ my_cv.email }}</p>
+    <p>{{ my_cv.phone }}</p>
+    <p>{{ my_cv.address }}</p>
+    <p>{{ my_cv.education }}</p>
+    <p>{{ my_cv.work_experience }}</p>
+    <p>{{ my_cv.interests }}</p>
+
+</div>
 {% endblock %}
