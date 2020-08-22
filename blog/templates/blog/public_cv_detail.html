@@ -1,0 +1,20 @@
+{% extends 'blog/base_public_cv.html' %}
+
+{% block content %}
+    <div class="public_cv">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'public_cv_edit' pk=public_cv.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>{{ public_cv.title }}</h2>
+        <p>{{ public_cv.name|linebreaksbr }}</p>
+        <p>{{ public_cv.email|linebreaksbr }}</p>
+        <p>{{ public_cv.phone|linebreaksbr }}</p>
+        <p>{{ public_cv.address|linebreaksbr }}</p>
+        <p>{{ public_cv.education|linebreaksbr }}</p>
+        <p>{{ public_cv.work_experience|linebreaksbr }}</p>
+        <p>{{ public_cv.interests|linebreaksbr }}</p>
+    </div>
+{% endblock %}
