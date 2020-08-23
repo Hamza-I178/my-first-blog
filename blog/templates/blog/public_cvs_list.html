@@ -3,11 +3,7 @@
 {% block content %}
         {% for public_cv in public_cvs %}
             <div class="public_cv">
-                    <div class="date">
-                            <p>published: {{ public_cv.published_date }}</p>
-                    </div>
                     <h2><a href="{% url 'public_cv_detail' pk=public_cv.pk %}">{{ public_cv.title }}</a></h2>
-                    <p>{{ public_cv.text|linebreaksbr }}</p>    
             </div>
         {% endfor %}
 {% endblock %}

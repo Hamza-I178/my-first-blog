@@ -2,9 +2,9 @@
 
 {% block content %}
     <div class="public_cv">
-        {% if post.published_date %}
+        {% if public_cv.published_date %}
             <div class="date">
-                {{ post.published_date }}
+                {{ public_cv.published_date }}
             </div>
         {% endif %}
         <a class="btn btn-default" href="{% url 'public_cv_edit' pk=public_cv.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
