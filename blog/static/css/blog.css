@@ -64,6 +64,6 @@ h1, h2, h3, h4 {
 }
 
 .topnav a.active {
-    background-colour: #c76000;
+    background-color: #c76000;
     color: white;
 }
